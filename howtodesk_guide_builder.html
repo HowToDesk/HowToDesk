@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HowToDesk — Make helpful guides in minutes</title>
+<style>
+:root{--ink:#17211d;--muted:#68746e;--line:#e2e8e3;--paper:#fff;--bg:#f5f7f4;--green:#216b4b;--green2:#dff3e6;--lime:#c8f169;--shadow:0 18px 50px rgba(23,33,29,.08)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input,textarea,select{font:inherit}button{cursor:pointer}.topbar{height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(18px,5vw,68px);background:#fff;border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:10px;font-weight:850;font-size:20px;letter-spacing:-.7px}.logo{height:35px;width:35px;background:var(--green);border-radius:11px;display:grid;place-items:center;color:white;font-size:18px}.topnote{font-size:12px;color:var(--muted);font-weight:650}.hero{padding:48px 20px 30px;text-align:center;max-width:900px;margin:auto}.eyebrow{display:inline-flex;align-items:center;gap:8px;border:1px solid #d8e5d9;background:#fff;border-radius:999px;padding:6px 11px;font-size:12px;font-weight:750;color:var(--green)}.dot{width:7px;height:7px;border-radius:50%;background:#4ca878}.hero h1{font-size:clamp(34px,5vw,54px);line-height:1.04;letter-spacing:-2.4px;margin:18px 0 14px}.hero h1 span{color:var(--green)}.hero p{max-width:620px;margin:0 auto;color:var(--muted);font-size:16px}.layout{max-width:1260px;margin:0 auto;padding:16px 22px 54px;display:grid;grid-template-columns:minmax(320px,.9fr) minmax(390px,1.1fr);gap:22px;align-items:start}.panel{background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);overflow:hidden}.panelhead{padding:21px 24px 17px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}.panelhead h2{font-size:17px;letter-spacing:-.4px;margin:0}.stepbadge{font-size:11px;font-weight:800;color:var(--green);background:var(--green2);padding:5px 9px;border-radius:99px}.formbody{padding:22px 24px 24px}.sectionlabel{font-size:11px;letter-spacing:1.1px;color:#7a877f;font-weight:850;margin:3px 0 13px;text-transform:uppercase}.field{margin-bottom:16px}.field label{display:block;font-weight:700;font-size:13px;margin-bottom:7px}.field small{display:block;color:var(--muted);font-size:12px;margin-top:6px}.field input,.field textarea,.field select{width:100%;border:1px solid #dce4de;border-radius:10px;padding:11px 12px;background:#fcfdfc;color:var(--ink);outline:none;transition:.15s}.field input:focus,.field textarea:focus,.field select:focus{border-color:#4c9b70;box-shadow:0 0 0 3px #e4f5e9}.field textarea{min-height:76px;resize:vertical}.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}.helper{font-size:12px;color:var(--muted);margin-top:-5px;margin-bottom:18px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.btn{border:0;border-radius:11px;padding:12px 16px;font-weight:800;transition:transform .15s,background .15s}.btn:hover{transform:translateY(-1px)}.primary{background:var(--green);color:white;flex:1}.primary:hover{background:#17563b}.secondary{background:#f0f4f0;color:var(--ink);border:1px solid var(--line)}.previewhead{padding:18px 20px;background:#fbfcfb;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:10px}.previewtitle{display:flex;align-items:center;gap:10px}.previewicon{width:34px;height:34px;background:var(--lime);border-radius:10px;display:grid;place-items:center}.previewtitle strong{display:block;font-size:14px}.previewtitle small{color:var(--muted);font-size:11px}.previewtools{display:flex;gap:7px}.mini{background:white;border:1px solid var(--line);border-radius:9px;padding:8px 10px;font-size:12px;font-weight:750;color:var(--ink)}.paperwrap{padding:25px;background:#edf1ed;min-height:600px}.document{max-width:650px;min-height:720px;margin:0 auto;background:#fff;border:1px solid #e4e9e4;box-shadow:0 10px 30px rgba(24,38,29,.07);padding:clamp(25px,4vw,46px);position:relative}.docbrand{font-size:11px;text-transform:uppercase;letter-spacing:1.6px;color:var(--green);font-weight:850;display:flex;align-items:center;gap:7px}.docbrand:before{content:"";width:8px;height:8px;border-radius:3px;background:var(--green)}.docmeta{color:var(--muted);font-size:12px;margin-top:8px}.doc h1{font-size:clamp(27px,3vw,39px);line-height:1.1;letter-spacing:-1.3px;margin:28px 0 12px}.intro{font-size:15px;color:#526159;max-width:520px}.callout{margin:22px 0;padding:14px 16px;border-radius:10px;background:#eff8f1;border-left:3px solid var(--green);font-size:13px}.doc h2{font-size:16px;margin:26px 0 10px;letter-spacing:-.2px}.steps{list-style:none;padding:0;margin:0;display:grid;gap:12px}.steps li{display:grid;grid-template-columns:29px 1fr;gap:10px;align-items:start}.num{width:27px;height:27px;border-radius:8px;background:var(--green);color:white;display:grid;place-items:center;font-weight:850;font-size:12px}.steptext strong{display:block;font-size:13px;margin:2px 0 3px}.steptext p{font-size:13px;color:#536159;margin:0;white-space:pre-wrap}.doc ul{padding-left:19px;color:#536159;font-size:13px}.doc li{margin:6px 0}.faq{border-top:1px solid var(--line);padding:11px 0}.faq strong{font-size:13px;display:block}.faq p{margin:5px 0 0;color:#536159;font-size:13px;white-space:pre-wrap}.footerline{margin-top:35px;padding-top:14px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;color:#839087;font-size:10px}.emptyhint{display:none}.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#17211d;color:white;padding:11px 16px;border-radius:10px;font-size:13px;box-shadow:var(--shadow);display:none;z-index:10}.disclaimer{max-width:1260px;margin:-30px auto 40px;padding:0 22px;color:#7b877f;font-size:11px;text-align:center}
+@media(max-width:900px){.layout{grid-template-columns:1fr;max-width:700px}.paperwrap{padding:14px}.document{min-height:600px}.hero{padding-top:35px}.topnote{display:none}}
+@media(max-width:480px){.two{grid-template-columns:1fr;gap:0}.formbody{padding:18px}.panelhead{padding:18px}.previewtools .mini{padding:8px}.paperwrap{padding:8px}.document{padding:23px}.hero h1{letter-spacing:-1.5px}}
+@media print{body{background:#fff}.topbar,.hero,.formpanel,.previewhead,.disclaimer{display:none!important}.layout{display:block;padding:0;margin:0;max-width:none}.previewpanel{border:0;box-shadow:none}.paperwrap{padding:0;background:#fff}.document{box-shadow:none;border:0;max-width:none;min-height:0;padding:12mm}.doc h1{font-size:30pt}.doc h2{break-after:avoid}.steps li,.faq{break-inside:avoid}@page{size:A4;margin:10mm}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><div class="logo">H</div>HowToDesk</div>
+  <div class="topnote">CUSTOM GUIDES · MADE SIMPLE</div>
+</header>
+<section class="hero">
+  <div class="eyebrow"><span class="dot"></span> YOUR BUSINESS KNOW-HOW, MADE CLEAR</div>
+  <h1>Turn what you know into<br><span>guides people can use.</span></h1>
+  <p>Create polished, custom step-by-step instructions, FAQs, and customer handouts for your business. Fill in the details and preview your guide as you build it.</p>
+</section>
+<main class="layout">
+  <section class="panel formpanel">
+    <div class="panelhead"><h2>Build your guide</h2><span class="stepbadge">STEP 1 · DETAILS</span></div>
+    <div class="formbody">
+      <div class="sectionlabel">Business details</div>
+      <div class="field"><label for="business">Business name</label><input id="business" value="Northstar Computer Repair" placeholder="e.g. Northstar Computer Repair"></div>
+      <div class="two">
+        <div class="field"><label for="industry">Industry</label><select id="industry"><option>Computer repair</option><option>Cleaning services</option><option>Home improvement</option><option>Pet services</option><option>Retail shop</option><option>Fitness and sports</option><option>Beauty and wellness</option><option>Freelance services</option><option>Other</option></select></div>
+        <div class="field"><label for="audience">Who is it for?</label><select id="audience"><option>Customers</option><option>New employees</option><option>Existing employees</option><option>Business partners</option><option>General audience</option></select></div>
+      </div>
+      <div class="field"><label for="topic">Guide title / task</label><input id="topic" value="Preparing your computer for repair" placeholder="e.g. How to prepare for an appointment"></div>
+      <div class="field"><label for="goal">What should the reader accomplish?</label><textarea id="goal" placeholder="Describe the result in one or two sentences.">Help customers prepare their device and know what to bring before dropping it off.</textarea></div>
+      <div class="sectionlabel" style="margin-top:22px">Guide content</div>
+      <div class="field"><label for="steps">Steps or key points <span style="font-weight:500;color:#7b877f">(one per line)</span></label><textarea id="steps" style="min-height:142px" placeholder="1. Back up important files&#10;2. Bring your charger&#10;3. Write down the issue">Back up important files if possible
+Write down the issue and any error messages
+Bring the device charger if relevant
+Have your contact information ready
+Ask the technician about the next steps and estimated timing</textarea><small>Write the real steps your business wants people to follow. We'll format them into a guide.</small></div>
+      <div class="field"><label for="notes">Important notes / things to avoid</label><textarea id="notes" placeholder="e.g. Never share your password by email.">Do not share passwords in an email or message. Ask the technician how sensitive data will be handled.</textarea></div>
+      <div class="field"><label for="faq">FAQs <span style="font-weight:500;color:#7b877f">(optional, one question per line)</span></label><textarea id="faq" placeholder="How long does it take?&#10;Do I need an appointment?">Do I need to back up my files?
+What should I bring with my device?</textarea></div>
+      <div class="field"><label for="answers">FAQ answers <span style="font-weight:500;color:#7b877f">(optional, match the same order)</span></label><textarea id="answers" placeholder="Answer to question 1&#10;Answer to question 2">Back up important files if you can, and ask us if you need help.
+Bring your device and any accessories needed to diagnose the issue.</textarea></div>
+      <div class="sectionlabel" style="margin-top:22px">Look and feel</div>
+      <div class="two">
+        <div class="field"><label for="tone">Writing style</label><select id="tone"><option value="friendly">Friendly and clear</option><option value="professional">Professional</option><option value="simple">Extra simple</option></select></div>
+        <div class="field"><label for="color">Brand color</label><select id="color"><option value="#216b4b">Forest green</option><option value="#2457a6">Trust blue</option><option value="#7146a6">Royal purple</option><option value="#b45a28">Warm orange</option><option value="#202a35">Charcoal</option></select></div>
+      </div>
+      <div class="field"><label for="contact">Website or contact details <span style="font-weight:500;color:#7b877f">(optional)</span></label><input id="contact" placeholder="e.g. example.com · (555) 555-0100"></div>
+      <div class="actions"><button class="btn primary" id="updateBtn">Update guide preview ↗</button><button class="btn secondary" id="sampleBtn">Load sample</button></div>
+      <p class="helper" style="margin:12px 0 0">This demo formats the information you enter in your browser. It does not send data to a server or use an AI service.</p>
+    </div>
+  </section>
+  <section class="panel previewpanel">
+    <div class="previewhead">
+      <div class="previewtitle"><div class="previewicon">✦</div><div><strong>Your live guide</strong><small>Preview · ready to print or save</small></div></div>
+      <div class="previewtools"><button class="mini" id="copyBtn">Copy text</button><button class="mini" id="printBtn">Export PDF ↗</button></div>
+    </div>
+    <div class="paperwrap"><article class="document" id="document">
+      <div class="docbrand" id="docBrand">HowToDesk · NORTHSTAR COMPUTER REPAIR</div>
+      <div class="docmeta" id="docMeta">CUSTOMER GUIDE · COMPUTER REPAIR</div>
+      <h1 id="docTitle">Preparing your computer for repair</h1>
+      <p class="intro" id="docIntro">Help customers prepare their device and know what to bring before dropping it off.</p>
+      <div class="callout"><strong>Before you begin</strong><div id="docCallout">Take your time and follow the steps below. If you're unsure about something, contact the business before proceeding.</div></div>
+      <h2>Step-by-step instructions</h2>
+      <ol class="steps" id="docSteps"></ol>
+      <div id="notesSection"><h2>Important notes</h2><div class="callout" id="docNotes"></div></div>
+      <div id="faqSection"><h2>Frequently asked questions</h2><div id="docFaq"></div></div>
+      <div class="footerline"><span id="docFooter">Prepared by HowToDesk</span><span>INSTRUCTION GUIDE</span></div>
+    </article></div>
+  </section>
+</main>
+<div class="disclaimer">HowToDesk demo · Review all instructions for accuracy before sharing. Safety, legal, medical, financial, and other specialized guidance should be verified by a qualified professional.</div>
+<div class="toast" id="toast"></div>
+<script>
+const $=id=>document.getElementById(id);
+const fields=['business','industry','audience','topic','goal','steps','notes','faq','answers','tone','color','contact'];
+const splitLines=s=>s.split(/\n/).map(x=>x.replace(/^\s*(?:\d+[\).]|[-•])\s*/,'').trim()).filter(Boolean);
+function showToast(msg){const t=$('toast');t.textContent=msg;t.style.display='block';clearTimeout(window._toastTimer);window._toastTimer=setTimeout(()=>t.style.display='none',2400)}
+function titleCase(s){return s.trim().replace(/\s+/g,' ')}
+function render(){
+ const business=titleCase($('business').value)||'Your Business';
+ const industry=$('industry').value;
+ const audience=$('audience').value;
+ const topic=titleCase($('topic').value)||'Your custom guide';
+ const goal=titleCase($('goal').value)||`Follow the instructions below to complete: ${topic.toLowerCase()}.`;
+ const steps=splitLines($('steps').value);
+ const notes=titleCase($('notes').value);
+ const questions=splitLines($('faq').value);
+ const answers=splitLines($('answers').value);
+ const tone=$('tone').value;
+ document.documentElement.style.setProperty('--green',$('color').value);
+ $('docBrand').textContent='HOWTODESK  ·  '+business.toUpperCase();
+ $('docMeta').textContent=(audience+' guide · '+industry).toUpperCase();
+ $('docTitle').textContent=topic;
+ $('docIntro').textContent=goal;
+ $('docCallout').textContent=tone==='simple'?'Read each step before you begin. If you are unsure, ask '+business+' for help.':tone==='professional'?'Review these instructions before beginning. Contact '+business+' if you need clarification.':'Use this guide as you go. If anything is unclear, reach out to '+business+' before continuing.';
+ const list=$('docSteps');list.innerHTML='';
+ (steps.length?steps:['Add your first step in the form to begin building your guide.']).forEach((step,i)=>{
+   const li=document.createElement('li');const num=document.createElement('span');num.className='num';num.textContent=i+1;
+   const wrap=document.createElement('div');wrap.className='steptext';const strong=document.createElement('strong');strong.textContent=step.length>64?step.slice(0,64)+'…':step;
+   const p=document.createElement('p');p.textContent=step.length>64?'Follow this instruction carefully and confirm the task is complete.':'Complete this step before moving on. If it does not apply to your situation, check with '+business+'.';
+   wrap.append(strong,p);li.append(num,wrap);list.append(li);
+ });
+ $('notesSection').style.display=notes?'':'none';$('docNotes').textContent=notes;
+ const faq=$('docFaq');faq.innerHTML='';const count=Math.max(questions.length,answers.length);
+ $('faqSection').style.display=count?'':'none';
+ for(let i=0;i<count;i++){const box=document.createElement('div');box.className='faq';const q=document.createElement('strong');q.textContent=questions[i]||`Question ${i+1}`;const a=document.createElement('p');a.textContent=answers[i]||'Add the business-approved answer to this question.';box.append(q,a);faq.append(box)}
+ $('docFooter').textContent=business+( $('contact').value.trim()?' · '+$('contact').value.trim():'')+' · Prepared with HowToDesk';
+}
+fields.forEach(id=>$(id).addEventListener('input',render));$('updateBtn').addEventListener('click',()=>{render();showToast('Guide preview updated')});
+$('printBtn').addEventListener('click',()=>{render();window.print()});
+$('copyBtn').addEventListener('click',async()=>{render();const text=$('document').innerText;try{await navigator.clipboard.writeText(text);showToast('Guide text copied')}catch(e){const ta=document.createElement('textarea');ta.value=text;document.body.appendChild(ta);ta.select();document.execCommand('copy');ta.remove();showToast('Guide text copied')}});
+$('sampleBtn').addEventListener('click',()=>{const sample={business:'Northstar Computer Repair',industry:'Computer repair',audience:'Customers',topic:'Preparing your computer for repair',goal:'Help customers prepare their device and know what to bring before dropping it off.',steps:'Back up important files if possible\nWrite down the issue and any error messages\nBring the device charger if relevant\nHave your contact information ready\nAsk the technician about next steps and estimated timing',notes:'Do not share passwords in an email or message. Ask the technician how sensitive data will be handled.',faq:'Do I need to back up my files?\nWhat should I bring with my device?',answers:'Back up important files if you can, and ask us if you need help.\nBring your device and any accessories needed to diagnose the issue.',tone:'friendly',color:'#216b4b',contact:''};Object.entries(sample).forEach(([k,v])=>$(k).value=v);render();showToast('Sample guide loaded')});
+render();
+</script>
+</body>
+</html>
